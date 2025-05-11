@@ -1,14 +1,14 @@
 import { Flex } from '@chakra-ui/react'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Navbar() {
     return (
-        <Flex height={"40px"} bg={"teal.500"}>
-            <Link to={"/"}>Home</Link>
-            <Link to={"/add-route"}>Add Notes</Link>
-            <Link to={"/view-route"}>View Notes</Link>
-            <Link to={"/about"}>About</Link>
+        <Flex height={"40px"} bg={"teal.500"} gap={"20px"} justifyContent={"center"} alignItems={"center"}>
+            <NavLink to={"/"}>Home</NavLink>
+            <NavLink to={"/add-note"}>Add Notes</NavLink>
+            <NavLink to={"/view-note"}>View Notes</NavLink>
+            <NavLink to={"/about"}>About</NavLink>
         </Flex>
     )
 }
